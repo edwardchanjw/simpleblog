@@ -6,7 +6,7 @@ date: 2020-10-29 20:35:00 +08:00
 
 ## Opinions expressed are solely my own
 
-As a developer that having some exposure of pre-Cloud era, until currently cloud subscription based + Pay Per Use economy, I had seem the economy of the Cloud's Technology evolved like Telco industry did 10 years ago.
+As a developer that having some exposure of pre-Cloud era, until currently cloud subscription based \+ Pay Per Use economy, I had seem the economy of the Cloud's Technology evolved like Telco industry did 10 years ago.
 
 Zapier, one of the coolest automation tools in the market, I am not here to tell your whether the Zapier's economy is right or not. It surely worked for certain business, if you able to grab and compete with competition, or niche to hold your market. Either way, Open source's edition would mostly helped, at least when truly transparent processing, and "Data never gone out your infrastructure kind of operation". So you can integrate data outside of your infrastructure, and send them inside to your Cloud for processing.
 
@@ -15,33 +15,44 @@ For list of open source code workflow automation tools such as node-red, Flogo, 
 ## Why I am choosing hosting it via Platform.sh vs Heroku?
 
 Pro:
-- Platform.sh is PaaS, similar to Heroku, stay focus on Stack rather than Linux Administrator, if you deep dive into feature building
-- Platform.sh is Bandwidth unlimited. (Mostly 2nd highest in the list)
-- Platform.sh included Support on compliance.
-- Platform.sh having automatic SSL
-- Having Travis-CI like with their Continuous deployment included, make your workflow only involved Dev and Ops
-- Platform.sh 's Service.yaml is awesome than Heroku's addon like Redis and Postgres.
-- Platform.sh dedicated having three-Virtual Machine redundant configuration provisioned support, when your business get success and prospect.
+
+* Platform.sh is PaaS, similar to Heroku, stay focus on Stack rather than Linux Administrator, if you deep dive into feature building
+
+* Platform.sh is Bandwidth unlimited. (Mostly 2nd highest in the list)
+
+* Platform.sh included Support on compliance.
+
+* Platform.sh having automatic SSL
+
+* Having Travis-CI like with their Continuous deployment included, make your workflow only involved Dev and Ops
+
+* Platform.sh 's Service.yaml is awesome than Heroku's addon like Redis and Postgres.
+
+* Platform.sh dedicated having three-Virtual Machine redundant configuration provisioned support, when your business get success and prospect.
 
 Cons:
 
-- Platform.sh do not have buildpacks.io of Standard. but it having Travis-CI like of Building and Deploy step. 
-- You may not have IaaS like amazon, digital ocean 
+* Platform.sh do not have buildpacks.io of Standard. but it having Travis-CI like of Building and Deploy step.
 
-### Step 1:  Setup TideFlow in Travis-CI   (This step is Optional when I create other post, to run and build tideflow on Platform.sh) 
+* You may not have IaaS like amazon, digital ocean
+
+### Step 1:  Setup TideFlow in Travis-CI   (This step is Optional when I create other post, to run and build tideflow on Platform.sh)
 
 1. Clone of https://github.com/tideflow-io/tideflow
+
 2. Write your .travis.yml file like https://github.com/edwardchanjw/tideflow/blob/master/.travis.yml
+
 3. You got the Travis-CI's build version of of Tar.GZ file
 
 ### Step 2.  Writing Platform.sh's Continuous deployment's YAML
 
 1. Clone https://github.com/platformsh-examples/platformsh-example-meteor
+
 2. Copied the Travis-CI's build version of of Tar.GZ file and also add the infrastructure as code: > .platform.app.yaml in Step 3.
+
 3. .platform.app.yaml
 
-<pre>
-<code>
+```
 # The name of this application, which must be unique within a project.
 name: 'app'
 
@@ -101,15 +112,12 @@ web:
             allow: true
             expires: -1
 
-</code>
-</pre>
+```
 
-
-***
+---
 
 Then change the ROOT_URL to your Platform.sh's provided URL, probably I can update Step 3 later...because I don't have time to test it now.
- 
+
 I have the urge to learn some Next.JS first, then I am bringing you the updated version of this article and another how to setup Node.js boilerplate, NEXT.js / Nuxt continuous deployment on Heroku and Platform.sh in next week. If you having any question, please don't afraid to ask, but I might update this post to new method soon.
 
 So that is, I am probably also setup my own subscription SaaS for some small market soon, but mostly I would write a boilerplate to share open source. See ya next time.
-
