@@ -41,7 +41,7 @@ Cons:
 3. .platform.app.yaml
 
 
-<pre><code>
+<code>
 # The name of this application, which must be unique within a project.
 name: 'app'
 
@@ -100,15 +100,12 @@ web:
           '\.png$':
             allow: true
             expires: -1
-</code></pre>
+
+</code>
 
 4. change the ROOT_URL to your Platform.sh's provided URL, probably I can update Step 3 later...because I don't have time to test it now.
  
 I have the urge to learn some Next.JS first, then I am bringing you the updated version of this article and another how to setup Node.js boilerplate, NEXT.js / Nuxt continuous deployment on Heroku and Platform.sh in next week. If you having any question, please don't afraid to ask, but I might update this post to new method soon.
 
 So that is, I am probably also setup my own subscription SaaS for some small market soon, but mostly I would write a boilerplate to share open source. See ya next time.
-
-    This is code
-    This is testing code block
-
 
