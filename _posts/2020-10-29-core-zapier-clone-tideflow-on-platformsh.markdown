@@ -40,7 +40,7 @@ Cons:
 2. Copied the Travis-CI's build version of of Tar.GZ file and also add the infrastructure as code: > .platform.app.yaml in Step 3.
 3. .platform.app.yaml
 
-
+<pre>
 <code>
 # The name of this application, which must be unique within a project.
 name: 'app'
@@ -102,8 +102,12 @@ web:
             expires: -1
 
 </code>
+</pre>
 
-4. change the ROOT_URL to your Platform.sh's provided URL, probably I can update Step 3 later...because I don't have time to test it now.
+
+***
+
+Then change the ROOT_URL to your Platform.sh's provided URL, probably I can update Step 3 later...because I don't have time to test it now.
  
 I have the urge to learn some Next.JS first, then I am bringing you the updated version of this article and another how to setup Node.js boilerplate, NEXT.js / Nuxt continuous deployment on Heroku and Platform.sh in next week. If you having any question, please don't afraid to ask, but I might update this post to new method soon.
 
