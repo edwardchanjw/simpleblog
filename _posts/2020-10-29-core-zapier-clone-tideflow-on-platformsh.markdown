@@ -48,9 +48,9 @@ Cons:
 
 1. Clone https://github.com/platformsh-examples/platformsh-example-meteor
 
-2. Copied the Travis-CI's build version of of Tar.GZ file and also add the infrastructure as code: > .platform.app.yaml in Step 3.
+2. Copied the Travis-CI's build version of of Tar.GZ file to your working got repository.
 
-3. .platform.app.yaml
+3. Write your CD script: .platform.app.yaml to deploy the GZ, probably you can build it inside platform.sh instead of travis-ci to save the trouble. 
 
 ```
 # The name of this application, which must be unique within a project.
@@ -116,8 +116,8 @@ web:
 
 ---
 
-Then change the ROOT_URL to your Platform.sh's provided URL, probably I can update Step 3 later...because I don't have time to test it now.
+Then change the ROOT_URL to your Platform.sh's provided Web URL in the web ui manually. Probably You can also read documentation about .environment file to automate it.
 
-I have the urge to learn some Next.JS first, then I am bringing you the updated version of this article and another how to setup Node.js boilerplate, NEXT.js / Nuxt continuous deployment on Heroku and Platform.sh in next week. If you having any question, please don't afraid to ask, but I might update this post to new method soon.
+TODO: Remove manual copied of travis-ci build and automate .environment in part 2.
 
-So that is, I am probably also setup my own subscription SaaS for some small market soon, but mostly I would write a boilerplate to share open source. See ya next time.
+So that is, I am probably also setup my own subscription SaaS for some small market soon, but mostly I would write a boilerplate to share in open source and how to deploy some alternative boilerplate on Platform.sh / Heroku. See ya next time.
